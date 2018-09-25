@@ -236,6 +236,7 @@ cat /image.config
 # have permissions for /app otherwise), install the dependencies
 # and add and build android platform
 # -----------------------------------------------------------------------------
+RUN pwd
 RUN cd /Users/nizamyaakop/Documents/demodocker && pwd
 RUN ionic config set -g backend legacy
 RUN ionic start ionicdocker blank --type ionic-angular --no-deps --no-link --no-git --no-interactive
