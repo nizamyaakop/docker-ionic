@@ -236,14 +236,13 @@ cat /image.config
 # have permissions for /app otherwise), install the dependencies
 # and add and build android platform
 # -----------------------------------------------------------------------------
-RUN \
-  cd / && \
-  ionic config set -g backend legacy && \
-  ionic start app blank --type ionic-angular --no-deps --no-link --no-git --no-interactive && \
-  cd /app && \
-  ${PACKAGE_MANAGER} install && \
-  ionic cordova platform add android --no-resources --no-interactive --no-confirm  && \
-  ionic cordova build android --no-interactive
+RUN cd / && pwd 
+RUN ionic config set -g backend legacy
+RUN ionic start app blank --type ionic-angular --no-deps --no-link --no-git --no-interactive
+RUN cd /app
+RUN ${PACKAGE_MANAGER} install
+RUN ionic cordova platform add android --no-resources --no-interactive --no-confirm
+RUN ionic cordova build android --no-interactive
 
 
 # -----------------------------------------------------------------------------
