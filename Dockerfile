@@ -243,7 +243,7 @@ RUN \
   cd /app && \
   ${PACKAGE_MANAGER} install && \
   ionic cordova platform add android --no-resources && \
-  ionic cordova build android
+  ionic cordova build android --no-interactive
 
 
 # -----------------------------------------------------------------------------
