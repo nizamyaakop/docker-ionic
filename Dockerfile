@@ -236,7 +236,7 @@ cat /image.config
 # have permissions for /app otherwise), install the dependencies
 # and add and build android platform
 # -----------------------------------------------------------------------------
-RUN cd / && pwd 
+RUN cd / && pwd
 RUN ionic config set -g backend legacy
 RUN ionic start app blank --type ionic-angular --no-deps --no-link --no-git --no-interactive
 RUN cd /app
