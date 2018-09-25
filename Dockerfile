@@ -236,10 +236,10 @@ cat /image.config
 # have permissions for /app otherwise), install the dependencies
 # and add and build android platform
 # -----------------------------------------------------------------------------
-RUN cd / && pwd
+RUN cd /Users/nizamyaakop/Documents/demodocker && pwd
 RUN ionic config set -g backend legacy
-RUN ionic start app blank --type ionic-angular --no-deps --no-link --no-git --no-interactive
-RUN cd /app
+RUN ionic start ionicdocker blank --type ionic-angular --no-deps --no-link --no-git --no-interactive
+RUN cd /Users/nizamyaakop/Documents/demodocker/ionicdocker
 RUN ${PACKAGE_MANAGER} install
 RUN ionic cordova platform add android --no-resources --no-interactive --no-confirm
 RUN ionic cordova build android --no-interactive
@@ -256,7 +256,7 @@ RUN git config --global credential.helper store
 # WORKDIR is the generic /app folder. All volume mounts of the actual project
 # code need to be put into /app.
 # -----------------------------------------------------------------------------
-WORKDIR /app
+WORKDIR /Users/nizamyaakop/Documents/demodocker/ionicdocker
 
 
 # -----------------------------------------------------------------------------
