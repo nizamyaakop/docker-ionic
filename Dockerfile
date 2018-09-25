@@ -241,8 +241,8 @@ RUN ionic config set -g backend legacy
 RUN ionic start app blank --type ionic-angular --no-deps --no-link --no-git --no-interactive
 RUN cd /app
 RUN ${PACKAGE_MANAGER} install
-RUN ionic cordova platform add android --no-resources --no-interactive --no-confirm
-RUN ionic cordova build android --no-interactive
+#RUN ionic cordova platform add android --no-resources --no-interactive --no-confirm
+#RUN ionic cordova build android --no-interactive
 
 
 # -----------------------------------------------------------------------------
