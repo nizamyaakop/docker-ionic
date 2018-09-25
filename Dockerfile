@@ -242,7 +242,7 @@ RUN \
   ionic start app blank --type ionic-angular --no-deps --no-link --no-git --no-interactive && \
   cd /app && \
   ${PACKAGE_MANAGER} install && \
-  ionic cordova platform add android --no-resources && \
+  ionic cordova platform add android --no-resources --no-interactive --no-confirm  && \
   ionic cordova build android --no-interactive
 
 
